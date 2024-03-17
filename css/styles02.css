@@ -1,0 +1,379 @@
+:root{
+    font-size: 18px;
+    --primary-100:#8FBF9F;
+    --primary-200:#68a67d;
+    --primary-300:#24613b;
+    --accent-100:#F18F01;
+    --accent-200:#833500;
+    --text-100:#353535;
+    --text-200:#5f5f5f;
+    --bg-100:#F5ECD7;
+    --bg-200:#ebe2cd;
+    --bg-300:#c2baa6;
+      
+}
+
+::selection{
+    background-color: var(--text-200);
+}
+
+body{
+    margin: 0;
+    background-color: var(--bg-100);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    font-size: 1rem;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* header y titulo */
+
+header{
+    background-color: var(--primary-100);
+    padding: 35px;
+    width: 100%;
+    height: 20%;
+    box-shadow: 1px 3px 4px var(--primary-200);
+    position: relative;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--text-100);
+    text-shadow: 0.2px 0.3px 1px var(--text-200);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* menu */
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+nav li a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--text-100);
+    border-right: 1px solid var(--bg-200);
+    border-radius: 2px;
+    color: var(--text-100);
+}
+
+nav li a:hover{
+    background-color: var(--primary-200);
+}
+
+/* contenido */
+
+section.body{
+    color: var(--text-100);
+    background-color: var(--bg-100);
+    width: 100%;
+    height: auto;
+    margin: 10px 0 10px 8px;
+}
+
+span{
+    font-weight: 550;
+}
+
+.body.contacto, .body.acercade {
+    height: 70%;
+}
+
+article>*{
+    margin: 15px 15px 15px 8px;
+}
+
+img{
+    width: 500px;
+    border-radius: 10px;
+}
+
+#receta{
+    text-align: left;
+}
+
+#ingredientes th, td{
+    padding: 3px;
+}
+
+#info{
+    list-style-type: square;
+    padding: 0;
+    margin: 0;
+}
+
+#info li{
+    padding: 3px;
+    margin: 5px 5px 10px 35px;
+}
+
+.mail a{
+    text-decoration: underline;
+    color: var(--text-100);
+}
+
+.mail a:hover{
+    color: var(--text-200);
+}
+
+/* formulario de registro */
+
+form h2{
+    margin: 25px 0px 30px 0px;
+}
+
+form{
+    max-width: 600px;
+    padding: 10px 20px;
+    margin: 15px auto;
+    border: 1px solid var(--bg-300);
+    border-radius: 15px;
+}
+
+label{
+    display: block;
+}
+
+.labelapart{
+    display: inline;
+    margin-right: 8px;
+}
+
+input[type="text"], input[type="date"]{
+    border: none;
+    padding: 10px;
+    margin: 0;
+    font-size: 15px;
+    outline: 0;
+    height: auto;
+    width: 100%;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 25px;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 8px 0 30px 0;
+  border-radius: 5px;
+}
+
+.enviar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.enviar li a{
+    text-decoration: none;
+    display: block;
+    color: var(--text-100);
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: var(--text-100);
+    background-color: var(--primary-200);
+    border: 1px solid var(--primary-200);
+    box-shadow: 0 -1px 0 var(--primary-200) inset;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.enviar li a:hover{
+    background-color: var(--primary-100);
+}
+
+/* sucursales */
+
+.direcciones a{
+    color: var(--text-100);
+}
+
+.direcciones a:hover{
+    color: var(--text-200);
+}
+
+.direcciones iframe{
+    border-radius: 5px;
+}
+
+/* redes y pie de pagina */
+
+footer{
+    background-color: var(--primary-100);
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10%;
+    color: var(--text-100);
+    text-align: center;
+    box-shadow: 1px 3px 4px var(--primary-200) inset;
+}
+
+.redes{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.redes li a{
+    text-decoration: none;
+    padding: 5px;
+    margin-right: 8px;
+    display: block;
+    font-size: 22px;
+    color: var(--text-100);
+}
+
+.redes li a:hover{
+    color: var(--primary-300);
+}
+
+/* mediaqueries */
+
+@media (max-width: 992px) {
+    section.body{
+        margin: 10px 0 30px 8px
+    }
+}
+
+@media (max-width: 768px) {
+    section.body.acercade{
+        height: auto;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 576px) {
+
+    iframe{
+        width: 400px;
+    }
+
+    img{
+        width: 400px;
+    }
+
+    section.body.acercade{
+        height: auto;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        position: static;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    nav li a{
+        border-right: none;
+        border-bottom: 1px solid var(--bg-200);
+    }
+
+    header {
+        height: auto;
+        position: static;
+        width: 100%;
+    }
+    
+    header h1 {
+        margin-top: 20px;
+        text-align: center;
+        position: static;
+        transform: none;
+    }
+    form{
+        max-width: 550px;
+        padding: 10px 20px;
+        border: none;
+    }
+
+    .enviar{
+        margin-top: 30px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    section.body.acercade{
+        height: auto;
+    }
+
+    iframe{
+        max-width: 90%;
+    }
+
+    img{
+        max-width: 90%;
+    }
+
+    section.body.acercade{
+        margin-bottom: 200px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        position: static;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    nav li a{
+        border-right: none;
+        border-bottom: 1px solid var(--bg-200);
+    }
+
+    header {
+        height: auto;
+        position: static;
+        width: 100%;
+    }
+    
+    header h1 {
+        margin-top: 20px;
+        text-align: center;
+        position: static;
+        transform: none;
+    }
+    form{
+        max-width: 550px;
+        padding: 10px 20px;
+        border: none;
+    }
+
+    .enviar{
+        margin-top: 30px;
+    }
+}
